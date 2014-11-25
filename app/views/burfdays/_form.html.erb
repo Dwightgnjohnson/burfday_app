@@ -1,0 +1,24 @@
+<%= simple_form_for(@burfday) do |f| %>
+<% if @burfday.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@burfday.errors.count, "error") %> prohibited this taco from being saved:</h2>
+
+  <ul>
+    <% @burfday.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <%= f.label :name %>
+  <%= f.input_field :name %>
+
+  <%= f.input :age %>
+
+  <%= f.label :photo %>
+  <%= f.input_field :photo %>
+
+    <%= f.button :submit %>
+
+<% end %>

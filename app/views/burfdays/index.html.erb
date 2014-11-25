@@ -1,0 +1,12 @@
+<h1>Listing burfdays</h1>
+
+    <% @burfdays.each do |burfday| %>
+    <strong><%= burfday.name %></strong> <%= burfday.age %>
+    <%= link_to 'Show', burfday %>
+          <%= link_to 'Edit', edit_burfday_path(burfday) %><%= link_to 'Destroy', burfday, method: :delete, data: { confirm: 'Are you sure?' } %>
+<br>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Burfday', new_burfday_path %>

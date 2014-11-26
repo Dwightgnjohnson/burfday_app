@@ -2,6 +2,9 @@
 
     <% @burfdays.each do |burfday| %>
     <strong><%= burfday.name %></strong> <%= burfday.age %>
+    <%= link_to burfday.photo.url(:mug) do %>
+    <%= image_tag burfday.photo.url(:thumb) %>
+    <% end %>
     <%= link_to 'Show', burfday %>
           <%= link_to 'Edit', edit_burfday_path(burfday) %><%= link_to 'Destroy', burfday, method: :delete, data: { confirm: 'Are you sure?' } %>
 <br>

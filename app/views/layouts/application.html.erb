@@ -16,6 +16,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <span class="notice"><%= notice %></span>
+  <span class="alert"><%= alert %></span>
+  <% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> | 
+  Welcome back <%= current_user.email %>!
+  <% end %>
   <div class="container">
 <%= yield %>
   </div>

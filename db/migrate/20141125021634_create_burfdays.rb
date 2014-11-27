@@ -10,7 +10,8 @@ class CreateBurfdays < ActiveRecord::Migration
       t.string :state
       t.string :country
       t.float  :budget
-      
+
+      t.references :user, index: true, null: false
       t.timestamps
     end
   end

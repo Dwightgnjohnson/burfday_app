@@ -26,9 +26,12 @@ ActiveRecord::Schema.define(version: 20141126010655) do
     t.string   "state"
     t.string   "country"
     t.float    "budget"
+    t.integer  "user_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "burfdays", ["user_id"], name: "index_burfdays_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

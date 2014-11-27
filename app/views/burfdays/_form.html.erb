@@ -11,6 +11,8 @@
 </div>
 <% end %>
 
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  
   <%= f.label :name %>
   <%= f.input_field :name %>
 

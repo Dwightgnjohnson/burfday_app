@@ -3,11 +3,13 @@ class BurfdaysController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @userburfdays = current_user.burfdays.all
     @burfdays = Burfday.all
   end
 
   def show
     @burfday = Burfday.find(params[:id])
+    @userburfday = current_user.burfdays.find(params[:id])
   end
 
   def new
@@ -44,6 +46,6 @@ class BurfdaysController < ApplicationController
 
 
   def burfday_params
-    params.require(:burfday).permit(:name, :age, :email, :photo, :street, :city, :state, :country, :budget)
+    params.require(:burfday).permit(:name, :age, :email, :photo, :street, :city, :state, :country, :budget, :user_id)
   end
 end

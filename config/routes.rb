@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :burfdays
 
+  get "/contact" => "contact_forms#new", as: :contact
+  post "/contact" => "contact_forms#create", as: :contact_forms
+
+  get "/thanku" => "contact_forms#thanku", as: :thanku
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

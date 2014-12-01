@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
     has_many :burfdays
+
+    after_create :send_welcome_email
+
+    private
+
+    def send_welcome_email
+      UserMailer.deliver_welcome_email(self)
+    end
+
+
 end

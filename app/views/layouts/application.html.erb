@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BurfdayApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <title>Burfday</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Latest compiled and minified CSS -->
@@ -23,8 +23,8 @@
   Welcome back <%= current_user.email %>!
   <% end %>
   <div class="container">
-<%= yield %>
-  <%= link_to "contact us", contact_path %>
+  <%= yield %>
   </div>
+  <%= link_to "contact us", contact_path %>
 </body>
 </html>

@@ -12,14 +12,18 @@
 <% end %>
 
   <%= f.hidden_field :user_id, value: current_user.id %>
-  
+
   <%= f.label :name %>
   <%= f.input_field :name %>
 
-  <%= f.input :age %>
+  <%= f.text_field :age, :id => "datepicker", :value => Date.today %>
 
   <%= f.label :photo %>
   <%= f.input_field :photo %>
 
   <%= f.submit %>
 <% end %>
+
+<script>
+$('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+</script>

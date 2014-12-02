@@ -14,7 +14,7 @@
 <%= f.label :name %>
 <%= f.input_field :name %>
 
-<%= f.input :age %>
+<%= f.text_field :age, :id => "datepicker" %>
 
 <%= f.label :photo %>
 <%= f.input_field :photo %>
@@ -41,3 +41,7 @@
 <%= f.button :submit %>
 
 <% end %>
+
+<script>
+$('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+</script>

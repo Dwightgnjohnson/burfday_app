@@ -22,7 +22,7 @@
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> |
   Welcome back <%= current_user.email %>!
   <% end %>
-  <div class="container">
+  <div class="container test1">
   <%= yield %>
   </div>
   <%= link_to "contact us", contact_path %>

@@ -19,8 +19,8 @@
 <%= f.label :photo %>
 <%= f.input_field :photo %>
 
-<%= f.label :buget %>
-<%= f.input_field :budget %>
+<%= f.label :budget %>
+<%= f.input :budget %>
 
 <h2>Additional Info</h2>
 
@@ -43,5 +43,5 @@
 <% end %>
 
 <script>
-$('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+$('#datepicker').datepicker({format: 'mm-dd-yyyy'});
 </script>

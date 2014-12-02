@@ -6,13 +6,4 @@ class User < ActiveRecord::Base
 
     has_many :burfdays
 
-    after_create :send_welcome_email
-
-    private
-
-    def send_welcome_email
-      UserMailer.deliver_welcome_email(self)
-    end
-
-
 end

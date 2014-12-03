@@ -23,6 +23,8 @@ class BurfdaysController < ApplicationController
   def create
     @burfday = Burfday.new(burfday_params)
     if @burfday.save
+      # Tell the UserMailer to send a new burfday email after save
+      UserMailer.new_burfday(@user).deliver
       redirect_to burfdays_path, notice: "NEW Burfday!"
     else
       render :new

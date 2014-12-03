@@ -1,21 +1,44 @@
-<h1>Listing burfdays</h1>
-  <% @userburfdays.each do |burfday| %>
-    <strong>
-      <%= burfday.name %>
-    </strong>
-      <%= burfday.age %>
 
-    <%= link_to burfday do %>
-      <%= image_tag burfday.photo.url(:thumb) %>
-  <% end %>
 
-    <% link_to 'Show', burfday %>
-    <% link_to 'Edit', edit_burfday_path(burfday) %>
-    <%= link_to 'Remove',
-      burfday, method: :delete, data: { confirm: 'Are you sure?' } %>
-<br>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 class="text-center">
+      <small><strong>#BURFDAYS</strong></small>
+    </h1>
+    <div class="text-right">
+      <%= link_to new_burfday_path do %>
+      <button type="button" class="btn btn-success btn-lg">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Burfday
+      </button>
+      <%end%>
+    </div>
+  </div>
 
-    <% end %>
-<br>
 
-<%= link_to 'New Burfday', new_burfday_path %>
+  <div class="panel-body">
+
+
+    <div class="row">
+      <% @userburfdays.each do |burfday| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+
+          <%= link_to edit_burfday_path(burfday) do %>
+            <%= image_tag burfday.photo.url(:mug) %>
+          <% end %>
+          <div class="caption">
+            <h2 class="text-center"><%= burfday.name %> <span class="badge badge-success"><%= burfday.dob %></span></h2>
+            <div class="text-center">
+              <%= link_to 'Edit', edit_burfday_path(burfday), :class => "btn btn-primary text-center", :role => "button" %>
+              <%= link_to 'Remove',
+              burfday, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-warning' %>
+              <% link_to 'Show', burfday %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <%end%>
+    </div>
+  </div>
+</div>

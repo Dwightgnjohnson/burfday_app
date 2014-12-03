@@ -15,13 +15,30 @@
 
   <%= f.label :name %>
   <%= f.input_field :name %>
-
-  <%= f.text_field :age, :id => "datepicker", :value => Date.today %>
-
+  <br>
+  <%= f.text_field :age, :id => "datepicker" %>
+  <br>
   <%= f.label :photo %>
   <%= f.input_field :photo %>
+  <br>
+  <%= f.label :budget %>
+  <%= f.input_field :budget %>
+  <br>
+  <h2>Additional Info</h2>
 
-  <%= f.submit %>
+  <%= f.input :email, :required => false %>
+
+  <%= f.label :street %>
+  <%= f.input_field :street %>
+
+  <%= f.label :city %>
+  <%= f.input_field :city %>
+
+  <%= f.label :state %>
+  <%= f.input_field :state %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+
 <% end %>
 
 <script>

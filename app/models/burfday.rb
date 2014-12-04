@@ -6,9 +6,30 @@ class Burfday < ActiveRecord::Base
 
   belongs_to :user
 
-  def dob
-    now = Time.now.utc.to_date
-    now.year - age.year - ((now.month > age.month || (now.month == age.month && now.day >= age.day)) ? 0 : 1)
+  def today
+    Time.now.utc.to_date
   end
+
+  def dob
+    today.year - age.year - ((today.month > age.month || (today.month == age.month && today.day >= age.day)) ? 0 : 1)
+  end
+
+
+  def dob_this_year
+    @day = age.day
+    @month = age.month
+    @year = today.year
+    @dob = "#{@year}-#{@month}-#{@day}"
+    return @dob.to_date
+  end
+
+  def dob_next_year
+    dob_this_year.next_year
+  end
+
+  def days_till_next_bufday
+    (dob_this_year - today).to_i
+  end
+
 
 end

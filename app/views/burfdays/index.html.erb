@@ -1,4 +1,16 @@
 
+<% @userburfdays.each do |burfday| %>
+Birth Year = <%= burfday.age.year %> for <%= burfday.name %> age <%= burfday.dob %>
+<br>
+DOB This Year = <%= burfday.dob_this_year %>
+<br>
+DOB Next Year = <%= burfday.dob_next_year %>
+<br>
+Days Until Burfday = <%= burfday.days_till_next_bufday %>
+
+<hr>
+<%end%>
+
 
 <div class="panel panel-default">
   <div class="panel-heading">

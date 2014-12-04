@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://54.186.104.15/'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -49,3 +49,5 @@ gem 'mail_form'
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 gem 'faker', '~> 1.4.3'
+gem 'chronic', '~> 0.10.2'
+gem 'birthday', '~> 0.3.0'

@@ -1,7 +1,7 @@
 <%= simple_form_for(@burfday) do |f| %>
 <% if @burfday.errors.any? %>
 <div id="error_explanation">
-  <h2><%= pluralize(@burfday.errors.count, "error") %> prohibited this taco from being saved:</h2>
+  <%= pluralize(@burfday.errors.count, "error") %> prohibited this #BURFDAY from being saved:
 
   <ul>
     <% @burfday.errors.full_messages.each do |message| %>
@@ -16,6 +16,7 @@
   <%= f.label :name %>
   <%= f.input_field :name %>
   <br>
+  <%= f.label :age %>
   <%= f.text_field :age, :id => "datepicker" %>
   <br>
   <%= f.label :photo %>
@@ -24,7 +25,7 @@
   <%= f.label :budget %>
   <%= f.input_field :budget %>
   <br>
-  
+
   <h2>Additional Info</h2>
 
   <%= f.input :email, :required => false %>

@@ -41,7 +41,7 @@ Days Until Burfday = <%= burfday.days_till_next_bufday %>
           <div class="caption">
             <h2 class="text-center"><%= burfday.name %> <span class="badge badge-success"><%= burfday.dob %></span></h2>
             <div class="text-center">
-              <%= link_to 'Edit', edit_burfday_path(burfday), :class => "btn btn-primary text-center", :role => "button" %>
+              <%= link_to 'Edit', burfday_path(burfday), :class => "btn btn-primary text-center", :role => "button" %>
               <%= link_to 'Remove',
               burfday, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-warning' %>
               <% link_to 'Show', burfday %>

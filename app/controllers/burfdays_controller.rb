@@ -16,10 +16,6 @@ class BurfdaysController < ApplicationController
     @burfday = Burfday.new
   end
 
-  def edit
-    @burfday = Burfday.find(params[:id])
-  end
-
   def create
     @burfday = Burfday.new(burfday_params)
     if @burfday.save

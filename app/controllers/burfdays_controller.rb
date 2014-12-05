@@ -23,7 +23,7 @@ class BurfdaysController < ApplicationController
   def create
     @burfday = Burfday.new(burfday_params)
     if @burfday.save
-      # UserMailer.new_burfday(@user).deliver
+      UserMailer.new_burfday(current_user).deliver
       redirect_to burfdays_path, notice: "NEW Burfday!"
     else
       render :new

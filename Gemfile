@@ -49,5 +49,6 @@ gem 'mail_form'
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 gem 'faker', '~> 1.4.3'
-gem 'chronic', '~> 0.10.2'
-gem 'birthday', '~> 0.3.0'
+group :development, :test do
+  gem 'foreman'
+end

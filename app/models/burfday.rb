@@ -28,8 +28,12 @@ class Burfday < ActiveRecord::Base
   end
 
   def days_till_next_bufday
-    (dob_this_year - today).to_i
+    (dob_next_year - today).to_i
   end
 
+  def progress_days_till_next_bufday
+    percent_left = (days_till_next_bufday / 365.0) * 100
+    100 - percent_left
+  end
 
 end

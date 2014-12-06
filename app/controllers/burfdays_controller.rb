@@ -3,7 +3,7 @@ class BurfdaysController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @userburfdays = current_user.burfdays.all
+    @userburfdays = current_user.burfdays.all.order("burfdays DESC")
     @burfdays = Burfday.all
   end
 

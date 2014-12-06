@@ -1,17 +1,3 @@
-
-<% @userburfdays.each do |burfday| %>
-Birth Year = <%= burfday.age.year %> for <%= burfday.name %> age <%= burfday.dob %>
-<br>
-DOB This Year = <%= burfday.dob_this_year %>
-<br>
-DOB Next Year = <%= burfday.dob_next_year %>
-<br>
-Days Until Burfday = <%= burfday.days_till_next_bufday %>
-
-<hr>
-<%end%>
-
-
 <div class="panel panel-default">
   <div class="panel-heading">
     <h1 class="text-center">
@@ -28,8 +14,6 @@ Days Until Burfday = <%= burfday.days_till_next_bufday %>
 
 
   <div class="panel-body">
-
-
     <div class="row">
       <% @userburfdays.each do |burfday| %>
       <div class="col-sm-6 col-md-4">
@@ -39,13 +23,23 @@ Days Until Burfday = <%= burfday.days_till_next_bufday %>
             <%= image_tag burfday.photo.url(:mug) %>
           <% end %>
           <div class="caption">
-            <h2 class="text-center"><%= burfday.name %> <span class="badge badge-success"><%= burfday.dob %></span></h2>
+            <h4 class="text-center"><%= burfday.name.titleize %> <span class="label label-success"><%= burfday.dob %></span></h4>
+
+<div class="panel panel-default">
+  <div class="text-center">
+      <h6><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= burfday.days_till_next_bufday %> Days Until #BURFDAY!</h6>
+    </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success progress-bar-striped active " role="progressbar" aria-valuenow="<%= burfday.progress_days_till_next_bufday %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= burfday.progress_days_till_next_bufday %>%">
+        <br>
+      </div>
+  </div>
+</div>
             <div class="text-center">
               <%= link_to 'Edit', burfday_path(burfday), :class => "btn btn-primary text-center", :role => "button" %>
               <%= link_to 'Remove',
               burfday, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-warning' %>
               <% link_to 'Show', burfday %>
-
             </div>
           </div>
         </div>

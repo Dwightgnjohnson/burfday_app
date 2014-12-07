@@ -16,6 +16,7 @@
   <div class="panel-body">
     <div class="row">
       <% @userburfdays.each do |burfday| %>
+
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
 
@@ -27,7 +28,7 @@
 
 <div class="panel panel-default">
   <div class="text-center">
-      <h6><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= burfday.days_till_next_bufday %> Days Until <%= burfday.name.titleize %>'s #BURFDAY!</h6>
+      <h6><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= burfday.days_till_next_bufday %> Days Until <%= burfday.name.titleize %>'s #BURFDAY on <%= burfday.age.strftime("%B %eth") %>!</h6>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-info progress-bar-striped active " role="progressbar" aria-valuenow="<%= burfday.progress_days_till_next_bufday %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= burfday.progress_days_till_next_bufday %>%">

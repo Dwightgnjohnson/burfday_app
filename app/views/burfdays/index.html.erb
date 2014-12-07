@@ -23,6 +23,10 @@
           <%= link_to burfday do %>
             <%= image_tag burfday.photo.url(:mug) %>
           <% end %>
+
+          <%= link_to "Test Mail", :controller => "burfdays", :action => "test_mail" %>
+
+
           <div class="caption">
             <h4 class="text-center"><%= burfday.name.titleize %> <span class="label label-success"><%= burfday.dob %></span></h4>
 

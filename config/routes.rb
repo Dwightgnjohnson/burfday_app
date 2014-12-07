@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'burfdays#index'
+  get :test_mail, to: 'burfdays#test_mail', as: :test_mail
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

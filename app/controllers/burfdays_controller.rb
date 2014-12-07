@@ -41,6 +41,10 @@ class BurfdaysController < ApplicationController
     redirect_to burfdays_path, notice: "Burfday Deleted"
   end
 
+  def test_mail
+    BurfdayMailer.burfday_reminder(current_user).deliver
+    redirect_to burfdays_path, notice: "Burfday Test sent"
+  end
 
   def burfday_params
     params.require(:burfday).permit(:name, :age, :email, :photo, :street, :city, :state, :country, :budget, :user_id)

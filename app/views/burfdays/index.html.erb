@@ -27,10 +27,10 @@
 
 <div class="panel panel-default">
   <div class="text-center">
-      <h6><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= burfday.days_till_next_bufday %> Days Until #BURFDAY!</h6>
+      <h6><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= burfday.days_till_next_bufday %> Days Until <%= burfday.name.titleize %>'s #BURFDAY!</h6>
     </div>
     <div class="progress">
-      <div class="progress-bar progress-bar-success progress-bar-striped active " role="progressbar" aria-valuenow="<%= burfday.progress_days_till_next_bufday %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= burfday.progress_days_till_next_bufday %>%">
+      <div class="progress-bar progress-bar-info progress-bar-striped active " role="progressbar" aria-valuenow="<%= burfday.progress_days_till_next_bufday %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= burfday.progress_days_till_next_bufday %>%">
         <br>
       </div>
   </div>

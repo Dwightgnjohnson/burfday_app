@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require prefixfree.jquery
 //= require bootstrap
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker-rails

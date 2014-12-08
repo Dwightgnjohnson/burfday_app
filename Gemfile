@@ -49,6 +49,7 @@ gem 'mail_form'
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 gem 'faker', '~> 1.4.3'
+gem "autoprefixer-rails"
 group :development, :test do
   gem 'foreman'
 end

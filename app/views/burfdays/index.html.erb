@@ -17,11 +17,11 @@
     <div class="row">
       <% @userburfdays.each do |burfday| %>
 
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-4 col-md-4">
         <div class="thumbnail">
 
           <%= link_to burfday do %>
-            <%= image_tag burfday.photo.url(:mug) %>
+            <%= image_tag burfday.photo.url(:mug), :class => "img-circle" %>
           <% end %>
 
           <%= link_to "Test Mail", :controller => "burfdays", :action => "test_mail" %>

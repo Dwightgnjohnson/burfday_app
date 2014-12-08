@@ -1,14 +1,14 @@
-<div class="panel panel-default">
+<div class="panel panel-primary">
   <div class="panel-heading">
-    <h1 class="text-center">
-      <small><strong>#BURFDAYS</strong></small>
-    </h1>
-    <div class="text-right">
-      <%= link_to new_burfday_path do %>
-      <button type="button" class="btn btn-success btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Burfday
-      </button>
-      <%end%>
+    <div class="row">
+      <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7"><h4>#BURFDAYS</h4></div>
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+        <%= link_to new_burfday_path do %>
+        <button type="button" class="btn btn-success btn-lg">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Burfday
+        </button>
+        <%end%>
+      </div>
     </div>
   </div>
 
@@ -28,7 +28,7 @@
 
 
           <div class="caption">
-            <h4 class="text-center"><%= burfday.name.titleize %> <span class="label label-success"><%= burfday.dob %></span></h4>
+            <h4 class="text-center"><%= burfday.name.titleize %> <span class="label label-primary"><%= burfday.dob %></span></h4>
 
 <div class="panel panel-default">
   <div class="text-center">
@@ -43,7 +43,7 @@
             <div class="text-center">
               <%= link_to 'Edit', burfday_path(burfday), :class => "btn btn-primary text-center", :role => "button" %>
               <%= link_to 'Remove',
-              burfday, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-warning' %>
+              burfday, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
               <% link_to 'Show', burfday %>
             </div>
           </div>

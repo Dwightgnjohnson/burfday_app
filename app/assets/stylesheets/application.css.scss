@@ -1,0 +1,47 @@
+$gray-base: #000;
+$brand-primary: darken(#75BD9F, 6.5%);
+$brand-success: #E3C636;
+$brand-info: #78b9a3;
+$brand-warning: #BD8075;
+$brand-danger: #d99952;
+$body-bg: #F5F5DC;
+
+$font-family-sans-serif: "Signika", sans-serif;
+$navbar-default-toggle-hover-bg: $brand-success;
+
+$navbar-default-bg: lighten($brand-primary, 0%);
+$navbar-default-toggle-border-color: white;
+$navbar-default-link-color: $body-bg;
+$navbar-default-link-hover-color: white;
+$navbar-default-link-active-color: $body-bg;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datepicker";
+@import "header";
+
+.test1 {
+  border:thin solid red;
+}
+.text-success {
+  color:$brand-success;
+}
+
+.text-white {
+  color: white;
+}
+.navbar-brand {
+  padding:0;
+  margin:0;
+  margin-top:-.5em;
+  margin-left: 1em;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .navbar-brand {
+  padding:0;
+  margin:0;
+  margin-top:-1em;
+  padding-left: 20px;
+  }
+}

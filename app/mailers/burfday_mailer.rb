@@ -1,4 +1,4 @@
-class BurfdayMailer < ActionMailer::Base
+class BurfdayMailer < BaseMailer
   default from: "burfday@example.com"
   layout 'email'
 

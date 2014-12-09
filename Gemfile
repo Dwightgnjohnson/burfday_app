@@ -52,4 +52,5 @@ gem 'faker', '~> 1.4.3'
 gem "autoprefixer-rails"
 group :development, :test do
   gem 'foreman'
+  gem 'letter_opener'
 end

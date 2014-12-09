@@ -93,4 +93,5 @@ Rails.application.configure do
     :authentication => :plain
   }
   ActionMailer::Base.delivery_method = :smtp
+  config.action_controller.include_all_helpers = true
 end

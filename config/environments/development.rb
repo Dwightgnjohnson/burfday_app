@@ -45,4 +45,6 @@ Rails.application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  config.action_controller.include_all_helpers = true
 end

@@ -29,7 +29,7 @@ class BurfdaysController < ApplicationController
   def update
     @burfday = Burfday.find(params[:id])
     if @burfday.update(burfday_params)
-      redirect_to @burfday, notice: "Burfday saved!"
+      redirect_to burfdays_path, notice: "#BURFDAY SAVED"
     else
       render :edit
     end

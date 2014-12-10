@@ -1,5 +1,5 @@
 class BurfdayMailer < BaseMailer
-  default from: "burfday@example.com"
+  default from: "rememberthose@burfdays.com"
   layout 'email'
 
   # Subject can be set in your I18n file at config/locales/en.yml

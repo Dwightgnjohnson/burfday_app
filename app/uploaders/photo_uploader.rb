@@ -19,7 +19,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # Provide a default URL as a default if there hasn't been a file uploaded:
 
   def default_url
-    'default.gif'
+    'https://burfday-live.s3.amazonaws.com/uploads/burfday/photo/1/default.gif'
   end
 
   def pre_limit file

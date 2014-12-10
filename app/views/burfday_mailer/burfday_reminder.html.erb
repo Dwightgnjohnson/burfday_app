@@ -1,5 +1,62 @@
-<h1>BurfdayMailer#burfday_reminder</h1>
+<body style="width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;">
+  <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="height:auto !important; margin:0; padding:0; width:100% !important; background-color:#FFFFFF; color:#222222;">
+    <tr>
+      <td>
+        <div id="tablewrap" style="width:100% !important; max-width:600px !important; text-align:center !important; margin-top:0 !important; margin-right: auto !important; margin-bottom:0 !important; margin-left: auto !important;">
+          <table id="contenttable" width="600" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; text-align:center !important; margin-top:0 !important; margin-right: auto !important; margin-bottom:0 !important; margin-left: auto !important; border:none; width: 100% !important; max-width:600px !important;">
+            <tr>
+              <h1 style="color:#78b9a3;"><strong><%= @greeting %></strong></h1>
+              <td width="100%">
+                <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" width="100%">
+                  <tr>
+                    <td width="100%" bgcolor="#ffffff" style="text-align:center;">
+                    </td>
+                  </tr>
+                </table>
+                <% @burfdays.all.each do |burfday| %>
+                <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="25" width="100%">
+                  <tr>
+                    <td width="100%" bgcolor="#ffffff" style="text-align:left;">
 
-<p>
-  <%= @greeting %>, find me in app/views/burfday_mailer/burfday_reminder.html.erb
-</p>
+                      <p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:19px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
+                      </p>
+                      <table border="0" cellspacing="0" cellpadding="0" width="100%" class="emailwrapto100pc">
+                        <tr>
+                          <td class="emailcolsplit" align="left" valign="top" width="70%">
+                            <p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:19px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
+
+                              <h1 style="color:#E3C636"><span style="color: #78b9a3;font-size:35px;"><%= burfday.days_till_next_bufday %></span> Days Until
+                              <%= burfday.name.titleize %>'s #BURFDAY on
+                              <%= burfday.age.strftime("%B %eth") %>!<h1>
+
+                            </p>
+                          </td>
+                          <td class="emailcolsplit" align="left" valign="top" width=30%" style="padding-left:17px;max-width:231px;">
+                            <%= image_tag burfday.photo.url(:mug), :style => "display:block; width:100% !important; height:auto !important;border-radius:50%;border:thick solid #E3C636" %>
+                          </td>
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+                <%end%>
+                <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" width="100%">
+                  <tr>
+                    <td width="100%" bgcolor="#ffffff" style="text-align:center;">
+
+                      <%= link_to root_url do %>
+                      <div style="display:block; max-width:100% !important; width:93% !important; height:auto !important;background-color:#78b9a3;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-radius:8px;color:#ffffff;font-size:24px;font-family:Arial, Helvetica, sans-serif;text-decoration:hidden;">#BURFDAY</div>
+                      <% end %>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>

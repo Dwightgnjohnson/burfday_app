@@ -40,9 +40,17 @@ class Burfday < ActiveRecord::Base
   end
 
   def progress_days_till_next_bufday
-
     percent_left = (days_till_next_bufday / 365.0) * 100
     100 - percent_left
+  end
+
+  def needs_1_week_reminder_email
+    # days_till_next_bufday
+    if days_till_next_bufday === 7
+      return true
+    else
+      return false
+    end
   end
 
 end

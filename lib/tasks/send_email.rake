@@ -1,6 +1,6 @@
 namespace :burfdays do
 
-  desc "send all emails that are unsent"
+  desc "send email"
   task :emails => :environment do
     puts "run me with rake burfdays:emails  "
     puts "Inside here, I'll get all unsent emails"

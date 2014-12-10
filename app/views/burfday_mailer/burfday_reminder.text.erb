@@ -1,3 +1,7 @@
-BurfdayMailer#burfday_reminder
+<%= @greeting %>
 
-<%= @greeting %>, find me in app/views/burfday_mailer/burfday_reminder.text.erb
+<% @burfdays.all.each do |burfday| %>
+<%= burfday.days_till_next_bufday %></span> Days Until
+<%= burfday.name.titleize %>'s #BURFDAY on
+<%= burfday.age.strftime("%B %eth") %>!
+<%end%>

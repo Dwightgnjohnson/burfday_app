@@ -5,6 +5,7 @@ class BurfdaysController < ApplicationController
   def index
     @userburfdays = current_user.burfdays.all.order("burfdays DESC")
     @burfdays = Burfday.all
+    @tests =[]
   end
 
   def show

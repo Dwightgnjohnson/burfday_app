@@ -9,7 +9,8 @@ class BurfdayMailer < BaseMailer
   #
   def burfday_reminder(user)
     @user = user
-    @greeting = "Hi, this is just a friendly reminder that there is a new birthday coming up!"
+    @burfdays = user.burfdays.all
+    @greeting = "YOUR WEEKLY #BURFDAY UPDATE!"
 
     mail(to: @user.email,
     subject: 'Upcoming #burfday')

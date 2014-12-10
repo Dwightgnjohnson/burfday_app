@@ -21,4 +21,4 @@ Adobe Photoshop
 Adobe Illustrator
 
 [#BURFDAY](https://burfday.herokuapp.com/burfdays) was built by [@dwightgnjohnson](http://www.designsbydwight.com/) as a final project at [The Iron Yard Academy](http://tiy-houston-q4-rails.github.io/) in the fall of 2014.
-(https://raw.githubusercontent.com/Dwightgnjohnson/burfday_app/master/app/assets/images/burfdaylogowhite.gif "#BURFDAY")
+![alt text](https://raw.githubusercontent.com/Dwightgnjohnson/burfday_app/master/app/assets/images/burfdaylogowhite.gif "Burfday Logo Gif")

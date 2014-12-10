@@ -3,8 +3,12 @@ class BurfdaysController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @userburfdays = current_user.burfdays.all.order("burfdays DESC")
     @burfdays = Burfday.all
+    if @burfdays.count
+      @userburfdays = current_user.burfdays.all.order("burfdays DESC")
+    else
+      @userburfdays = "hi"
+    end
     @tests =[]
   end
 

@@ -1,9 +1,5 @@
 <%= link_to "Test Mail", :controller => "burfdays", :action => "test_mail" %>
 
-<% @userburfdays.each do |burfday| %>
-  <% @tests << burfday.days_till_next_bufday if !@tests.include? burfday.days_till_next_bufday %>
-<%end%>
-
 <div class="panel panel-primary">
   <div class="panel-heading">
     <div class="row">
@@ -21,11 +17,25 @@
 
   <div class="panel-body">
     <div class="row">
+      <% if @userburfdays.count == 0 %>
+      <div class="col-sm-12">
+        <h1 class="text-center">
+          <%= image_tag "ohnokevin.png"%>
+          <br><br>
+          WHERE'S ALL YO' #BURFDAYS?!
+        </h1>
+      </div>
+      <%end%>
+<% @userburfdays.each do |burfday| %>
+      <% @tests << burfday.days_till_next_bufday if !@tests.include? burfday.days_till_next_bufday %>
+<%end%>
+
       <% @tests.sort.each do |test| %>
         <% @userburfdays.each do |burfday| %>
 
           <% if burfday.days_till_next_bufday  == test %>
                   <div class="col-sm-4 col-md-4">
+
                     <div class="thumbnail">
 
                       <%= link_to burfday do %>

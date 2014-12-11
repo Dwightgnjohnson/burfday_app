@@ -1,9 +1,19 @@
-<%= link_to "Test Mail", :controller => "burfdays", :action => "test_mail" %>
-
 <div class="panel panel-primary">
   <div class="panel-heading">
     <div class="row">
-      <div class="col-lg-10 col-md-10 col-sm-9 col-xs-6 pull-left"><h4>#BURFDAYS</h4></div>
+      <div class="col-lg-10 col-md-10 col-sm-9 col-xs-6 pull-left">
+<% if @userburfdays.count >= 0 %>
+<%= link_to :controller => "burfdays", :action => "test_mail" do %>
+
+  <button type="button" class="btn btn-success btn-md red-tooltip" data-toggle="tooltip" data-placement="right" title="GET #BURFDAYS EMAIL">
+
+    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+
+  </button>
+<%end%>
+<%end%>
+
+</div>
       <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 pull-right">
         <%= link_to new_burfday_path do %>
         <button type="button" class="btn btn-success btn-lg pull-right">
@@ -70,3 +80,8 @@
     </div>
   </div>
 </div>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>

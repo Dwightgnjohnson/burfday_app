@@ -24,9 +24,9 @@ class BurfdaysController < ApplicationController
 
   def create
     @burfday = Burfday.new(burfday_params)
-    @burfday.save
+    if @burfday.save
     redirect_to burfdays_path, notice: "NEW #BURFDAY"
-
+    end
   end
 
   def update

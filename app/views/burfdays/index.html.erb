@@ -3,10 +3,10 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
     <div class="row">
-      <div class="col-lg-10 col-md-10 col-sm-9 col-xs-7"><h4>#BURFDAYS</h4></div>
-      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+      <div class="col-lg-10 col-md-10 col-sm-9 col-xs-6 pull-left"><h4>#BURFDAYS</h4></div>
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 pull-right">
         <%= link_to new_burfday_path do %>
-        <button type="button" class="btn btn-success btn-lg">
+        <button type="button" class="btn btn-success btn-lg pull-right">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Burfday
         </button>
         <%end%>
@@ -18,13 +18,10 @@
   <div class="panel-body">
     <div class="row">
       <% if @userburfdays.count == 0 %>
-      <div class="col-sm-12">
-        <h1 class="text-center">
-          <%= image_tag "ohnokevin.png"%>
-          <br><br>
-          WHERE'S ALL YO' #BURFDAYS?!
-        </h1>
-      </div>
+
+          <%= image_tag "ohnokevin.png", class: "img-responsive center-block", style: "width:60%;max-width:300px;" %>
+          <h1 class="text-center">WHERE'S ALL YO' #BURFDAYS?!</h1>
+
       <%end%>
 <% @userburfdays.each do |burfday| %>
       <% @tests << burfday.days_till_next_bufday if !@tests.include? burfday.days_till_next_bufday %>

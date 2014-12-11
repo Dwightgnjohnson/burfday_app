@@ -15,16 +15,28 @@
 
 </div>
       <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 pull-right">
-        <%= link_to new_burfday_path do %>
-        <button type="button" class="btn btn-success btn-lg pull-right">
+        <!-- Button trigger modal -->
+        <button new_burfday_path, type="button" class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Burfday
         </button>
-        <%end%>
       </div>
     </div>
   </div>
 
-
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">NEW #BURFDAY!</h4>
+        </div>
+        <div class="modal-body">
+          <div id="burthday_form"><%= render partial: "form" %></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="panel-body">
     <div class="row">
       <% if @userburfdays.count == 0 %>

@@ -49,3 +49,7 @@ $navbar-default-link-active-color: $body-bg;
   padding-left: 20px;
   }
 }
+
+.datepicker{
+  z-index: 9999999 !important;
+}

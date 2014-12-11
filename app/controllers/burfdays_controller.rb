@@ -1,6 +1,7 @@
 class BurfdaysController < ApplicationController
 
   before_action :authenticate_user!
+  skip_before_filter :verify_authenticity_token
 
   def index
     @burfdays = Burfday.all
@@ -23,12 +24,9 @@ class BurfdaysController < ApplicationController
 
   def create
     @burfday = Burfday.new(burfday_params)
-    if @burfday.save
-      # UserMailer.new_burfday(current_user).deliver
-      redirect_to burfdays_path, notice: "NEW Burfday!"
-    else
-      render :new
-    end
+    @burfday.save
+    redirect_to burfdays_path, notice: "NEW #BURFDAY"
+
   end
 
   def update

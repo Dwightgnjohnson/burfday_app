@@ -1,13 +1,15 @@
 h1.logo2 {
   font:bold 5em/1.6 'Signika', sans-serif;
   user-select:none;
+  .small-copyright {font:bold 20px/1.6 'Signika', sans-serif;}
 }
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   h1.logo2 {
-    font:bold 1.8em/1.6 'Signika', sans-serif;
+    font:bold 1.8em/0.6 'Signika', sans-serif;
     user-select:none;
+    .small-copyright {font:bold 10px/1.6 'Signika', sans-serif;}
   }
 }
 

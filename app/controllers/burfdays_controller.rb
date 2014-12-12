@@ -46,7 +46,7 @@ class BurfdaysController < ApplicationController
 
   def test_mail
     BurfdayMailer.burfday_reminder(current_user).deliver
-    redirect_to burfdays_path, notice: "Burfday Test sent"
+    redirect_to burfdays_path, notice: "#BURFDAYS Sent! Check Yo' Email"
   end
 
   def burfday_params

@@ -60,15 +60,12 @@
                         <%= image_tag burfday.photo.url(:mug), :class => "img-circle" %>
                       <% end %>
 
-
-
-
                       <div class="caption">
                         <h4 class="text-center"><%= burfday.name.titleize %> <span class="label label-primary"><%= burfday.dob %></span></h4>
 
             <div class="panel panel-default">
-              <div class="text-center">
-                  <h6><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= burfday.days_till_next_bufday %> Days Until <%= burfday.name.titleize %>'s #BURFDAY on <%= burfday.age.strftime("%B %eth") %>!</h6>
+              <div class="text-center index-details">
+                  <h4><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> <%= burfday.days_till_next_bufday %> Days Until <%= burfday.name.titleize %>'s #BURFDAY<h4><h6><%= burfday.age.strftime("%B %eth") %></h6>
                 </div>
                 <div class="progress">
                   <div class="progress-bar progress-bar-info progress-bar-striped active " role="progressbar" aria-valuenow="<%= burfday.progress_days_till_next_bufday %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= burfday.progress_days_till_next_bufday %>%">

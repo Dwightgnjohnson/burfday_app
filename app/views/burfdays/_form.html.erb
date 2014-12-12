@@ -19,13 +19,16 @@ $('#datepicker').datepicker({format: 'yyyy-mm-dd'});
   <%= f.hidden_field :user_id, value: current_user.id %>
 
 <div class="form-group">
-  <%= f.input_field :name, class: "form-control", placeholder: "Their Name" %>
+  <%= f.label :name, class: "col-sm-2 control-label" %>
+  <%= f.input_field :name, class: "form-control", placeholder: "Full Name" %>
 </div>
 <div class="form-group">
-  <%= f.text_field :age, class: "form-control", id: "datepicker", placeholder: "THEIR #BURFDAY" %>
+  <%= f.label :age, class: "col-sm-2 control-label" %>
+  <%= f.text_field :age, class: "form-control", id: "datepicker", placeholder: "#BURFDAY" %>
 </div>
 
 <div class="form-group">
+  <%= f.label :photo, class: "col-sm-2 control-label" %>
   <%= f.input_field :photo, class: "form-control" %>
 </div>
 
@@ -33,7 +36,7 @@ $('#datepicker').datepicker({format: 'yyyy-mm-dd'});
   <% f.input_field :email, class: "form-control", placeholder: "Their Email Address" %>
 </div> -->
 
-  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= f.button :submit, :class => 'btn-success' %>
 
 <% end %>
 

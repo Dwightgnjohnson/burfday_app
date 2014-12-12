@@ -19,6 +19,8 @@ $navbar-default-link-active-color: $body-bg;
 @import "bootstrap";
 @import "bootstrap-datepicker";
 @import "logo";
+@import "logo2";
+
 
 .test {
   border:thin solid red;
@@ -52,4 +54,8 @@ $navbar-default-link-active-color: $body-bg;
 
 .datepicker{
   z-index: 9999999 !important;
+}
+
+.index-details {
+  min-height:50px;
 }

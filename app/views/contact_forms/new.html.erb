@@ -1,8 +1,45 @@
+<div class="col-sm-12">
+  <h1 class="logo2">
+    <span>#</span><span>H</span><span>A</span><span>P</span><span>P</span><span>Y</span><span>&nbsp</span><span>B</span><span>U</span><span>R</span><span>F</span><span>D</span><span>A</span><span>Y</span><span>S</span><span>&copy;</span>
+  </h1>
+</div>
+
+<div class="col-sm-6">
+<h1>GET IN TOUCH</h1>
+<p>#BURFDAYS is a student project for @dwightgnjohnson. It is built using Ruby on Rails and a bunch of JavaScript.</p>
+<p>Having only about 2 or so weeks to complete the project - there are a lot of features left out of the initial release - but don't worry - there are endless amounts of cool things we could add to the project. But, if you have any suggestion(s), please don't hesitate to get in contact below!</p>
+<br>
+<h2>HAPPY #BURFDAYS</h2>
+
+</div>
 <%= simple_form_for @contact_form do |f| %>
-  <%= f.input :name %>
-  <%= f.input :email %>
-  <%= f.input :message, as: :text %>
-  <%= f.submit %>
+
+<div class="form-group">
+  <%= f.label :name, class: "col-sm-12 control-label" %>
+  <div class="col-sm-6">
+    <%= f.input_field :name, class: "form-control" %>
+  </div>
+</div>
+<br>
+<div class="form-group">
+  <%= f.label :email, class: "col-sm-12 control-label" %>
+  <div class="col-sm-6">
+    <%= f.email_field :email, class: "form-control" %>
+  </div>
+</div>
+<br>
+<div class="form-group">
+  <%= f.label :message, as: :text, class: "col-sm-12 control-label" %>
+  <div class="col-sm-6">
+    <%= f.text_area :message, class: "form-control" %>
+  </div>
+</div>
+<br><br>
+<div class="form-group">
+  <div class="col-sm-12">
+    <%= f.submit "Sign up", class: "btn btn-primary" %>
+  </div>
+</div>
 <%end%>
 
 <script type="text/javascript">

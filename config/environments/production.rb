@@ -94,4 +94,5 @@ Rails.application.configure do
   }
   ActionMailer::Base.delivery_method = :smtp
   config.action_controller.include_all_helpers = true
+  ActionMailer::Base.default :from => "#BURFDAYS <burfdayreminder@burfdays.com>"
 end

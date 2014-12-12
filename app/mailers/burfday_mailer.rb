@@ -1,5 +1,4 @@
 class BurfdayMailer < BaseMailer
-  default from: "rememberthose@burfdays.com"
   layout 'email'
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -11,7 +10,7 @@ class BurfdayMailer < BaseMailer
     @user = user
     @burfdays = user.burfdays.all
     @greeting = "YOUR WEEKLY #BURFDAY UPDATE!"
-
+    @tests =[]
     mail(to: @user.email,
     subject: 'Upcoming #burfday')
   end
